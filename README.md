@@ -30,6 +30,7 @@ DISTINCT:
 
 оптимизируйте запрос: внесите корректировки по использованию операторов, при необходимости добавьте индексы.
 
+```
 EXPLAIN ANALYZE
 SELECT 
     CONCAT(c.last_name, ' ', c.first_name) AS customer_name,
@@ -46,6 +47,7 @@ WHERE
     AND p.payment_date < '2005-07-31'
 GROUP BY 
     c.customer_id, f.title;
+```
 
 ![Скриншот](./img/Задание2_2_оптимизирован.jpg).
 
