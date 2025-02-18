@@ -6,6 +6,19 @@
 Задание 1
 Напишите запрос к учебной базе данных, который вернёт процентное отношение общего размера всех индексов к общему размеру всех таблиц.
 
+```
+SELECT 
+    ROUND(
+        (SUM(INDEX_LENGTH) / 
+        (SUM(DATA_LENGTH) + SUM(INDEX_LENGTH)) * 100), 
+        2
+    ) AS index_ratio_percent
+FROM 
+    INFORMATION_SCHEMA.TABLES 
+WHERE 
+    TABLE_SCHEMA = 'sakila';
+```
+
 ![Скриншот](./img/Задание1.jpg).
 
 Задание 2
