@@ -16,7 +16,7 @@ sudo nmap -sV < ip-адрес >
 По желанию можете поэкспериментировать с опциями: https://nmap.org/man/ru/man-briefoptions.html.
 
 В качестве ответа пришлите события, которые попали в логи Suricata и Fail2Ban, прокомментируйте результат.
-![Скриншот](./img/Задание1.jpg).
+![Скриншот](./img/задание1.jpg).
 
 Эти события соответствуют выполнению команд nmap -sA, -sT, -sS, -sV. Suricata корректно классифицировала их как Potentially Bad Traffic или Attempted Information Leak, что указывает на попытку разведки сети. 
 
